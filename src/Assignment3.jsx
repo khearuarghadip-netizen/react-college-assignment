@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-// Initial Farm Employee Data
+// Initial Employee Data
 const initialEmployees = [
   {
     id: "EMP101",
@@ -36,7 +36,6 @@ export default function Assignment3() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedDept, setSelectedDept] = useState("All");
 
-  // Form State
   const [form, setForm] = useState({
     id: "",
     name: "",
@@ -49,7 +48,6 @@ export default function Assignment3() {
 
   const [editingId, setEditingId] = useState(null);
 
-  // Add or Edit Employee Handler
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!form.id || !form.name) return;
@@ -65,7 +63,6 @@ export default function Assignment3() {
       setEmployees([...employees, form]);
     }
 
-    // Reset Form
     setForm({
       id: "",
       name: "",
@@ -77,18 +74,15 @@ export default function Assignment3() {
     });
   };
 
-  // Delete Employee Handler
   const handleDelete = (id) => {
     setEmployees(employees.filter(emp => emp.id !== id));
   };
 
-  // Edit Mode Setup
   const handleEdit = (emp) => {
     setEditingId(emp.id);
     setForm(emp);
   };
 
-  // Filter and Search
   const filteredEmployees = employees.filter(emp => {
     const matchesSearch = emp.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           emp.id.toLowerCase().includes(searchTerm.toLowerCase());
@@ -103,7 +97,6 @@ export default function Assignment3() {
         <p style={{ color: '#64748b', margin: 0, fontSize: '14px' }}>Assignment 3: State & Event Handling</p>
       </div>
 
-      {/* Control Bar: Employee Count, Search & Filter */}
       <div style={{
         display: 'flex',
         justifyContent: 'space-between',
@@ -142,7 +135,6 @@ export default function Assignment3() {
         </div>
       </div>
 
-      {/* Add / Edit Employee Form */}
       <form onSubmit={handleSubmit} style={{
         backgroundColor: 'white',
         padding: '20px',
@@ -222,7 +214,6 @@ export default function Assignment3() {
         </button>
       </form>
 
-      {/* Employee List Table */}
       <div style={{ overflowX: 'auto', backgroundColor: 'white', borderRadius: '10px', boxShadow: '0 1px 3px rgba(0,0,0,0.1)' }}>
         <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '13px' }}>
           <thead>
