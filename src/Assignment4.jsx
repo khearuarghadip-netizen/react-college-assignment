@@ -62,8 +62,8 @@ export default function Assignment4() {
   return (
     <div style={{ padding: '30px', backgroundColor: '#f1f5f9', minHeight: '85vh', fontFamily: 'sans-serif' }}>
       <div style={{ textAlign: 'center', marginBottom: '25px' }}>
-        <h2 style={{ color: '#0f172a', margin: '0 0 6px 0' }}>Real-time Weather Dashboard</h2>
-        <p style={{ color: '#64748b', margin: 0, fontSize: '14px' }}>Assignment 4: API Integration & useEffect</p>
+        <h2 style={{ color: '#44135b', margin: '0 0 6px 0' }}>Real-time Weather Dashboard</h2>
+        <p style={{ color: '#59c1cd', margin: 0, fontSize: '14px' }}>Assignment 4: API Integration & useEffect</p>
       </div>
 
       {/* Search Input Box */}
