@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-// StudentCard Component: Receives data via props
+// Student Card Component
 function StudentCard({ student }) {
   return (
     <div style={{
@@ -15,14 +15,7 @@ function StudentCard({ student }) {
       <img
         src={student.photo}
         alt={student.name}
-        style={{
-          width: '80px',
-          height: '80px',
-          borderRadius: '50%',
-          objectFit: 'cover',
-          marginBottom: '10px',
-          border: '3px solid #6366f1'
-        }}
+        style={{ width: '80px', height: '80px', borderRadius: '50%', objectFit: 'cover', marginBottom: '10px', border: '3px solid #6366f1' }}
       />
       <h3 style={{ margin: '8px 0', fontSize: '18px', color: '#0f172a' }}>{student.name}</h3>
       <p style={{ margin: '4px 0', fontSize: '13px', color: '#64748b' }}><strong>Roll:</strong> {student.roll}</p>
@@ -38,10 +31,10 @@ function StudentCard({ student }) {
 // Assignment 2 Main Component
 export default function Assignment2() {
   const initialStudents = [
-    { name: "Arghadip Khearu", roll: "231001102286", dept: "BCA", sem: "4th Semester", cgpa: 9.15, photo: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150" },
-    { name: "Riya Sen", roll: "231001102290", dept: "BCA", sem: "4th Semester", cgpa: 8.80, photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150" },
-    { name: "Suman Das", roll: "231001102302", dept: "BCA", sem: "4th Semester", cgpa: 9.45, photo: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150" },
-    { name: "Priya Ghosh", roll: "231001102315", dept: "BCA", sem: "4th Semester", cgpa: 8.65, photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150" }
+    { name: "Arghadip Khearu", roll: "231001102286", dept: "BCA", sem: "4th", cgpa: 9.15, photo: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150" },
+    { name: "Riya Sen", roll: "231001102290", dept: "BCA", sem: "4th", cgpa: 8.80, photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150" },
+    { name: "Suman Das", roll: "231001102302", dept: "BCA", sem: "4th", cgpa: 9.45, photo: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150" },
+    { name: "Priya Ghosh", roll: "231001102315", dept: "BCA", sem: "4th", cgpa: 8.65, photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150" }
   ];
 
   const [students, setStudents] = useState(initialStudents);
