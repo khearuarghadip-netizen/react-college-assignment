@@ -4,13 +4,13 @@ import Assignment2 from './Assignment2';
 import Assignment3 from './Assignment3';
 import Assignment4 from './Assignment4';
 import Assignment5 from './Assignment5';
+import Assignment6 from './Assignment6';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState(5); // Default to Assignment 5
+  const [activeTab, setActiveTab] = useState(6);
 
   return (
     <div style={{ fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif', minHeight: '100vh', margin: 0, padding: 0, backgroundColor: '#0b1120' }}>
-      {/* Top Navigation Bar */}
       <nav style={{ backgroundColor: '#0f172a', padding: '14px 10px', display: 'flex', justifyContent: 'center', gap: '10px', flexWrap: 'wrap', borderBottom: '1px solid #1e293b' }}>
         <button
           onClick={() => setActiveTab(1)}
@@ -91,15 +91,31 @@ export default function App() {
         >
           Assignment 5: Shopping Cart
         </button>
+
+        <button
+          onClick={() => setActiveTab(6)}
+          style={{
+            padding: '9px 16px',
+            borderRadius: '8px',
+            border: 'none',
+            cursor: 'pointer',
+            fontWeight: '700',
+            fontSize: '13px',
+            backgroundColor: activeTab === 6 ? '#38bdf8' : '#334155',
+            color: activeTab === 6 ? '#0f172a' : '#ffffff'
+          }}
+        >
+          Assignment 6: Task Manager
+        </button>
       </nav>
 
-      {/* Main View Area */}
       <main>
         {activeTab === 1 && <Assignment1 />}
         {activeTab === 2 && <Assignment2 />}
         {activeTab === 3 && <Assignment3 />}
         {activeTab === 4 && <Assignment4 />}
         {activeTab === 5 && <Assignment5 />}
+        {activeTab === 6 && <Assignment6 />}
       </main>
     </div>
   );
