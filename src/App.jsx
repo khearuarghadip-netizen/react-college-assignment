@@ -6,19 +6,19 @@ import Assignment4 from './Assignment4';
 import Assignment5 from './Assignment5';
 import Assignment6 from './Assignment6';
 import Assignment7 from './Assignment7';
-import Assignment8 from './Assignment8';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState(8); // Default to Assignment 8
+  // Prothome Assignment 1 khulbe
+  const [activeTab, setActiveTab] = useState(1);
 
   return (
     <div style={{ fontFamily: 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif', minHeight: '100vh', margin: 0, padding: 0, backgroundColor: '#0b1120' }}>
-      {/* Top Navigation Bar */}
+      {/* Top Navigation Bar (Only Assignment 1 to 7) */}
       <nav style={{ backgroundColor: '#0f172a', padding: '14px 10px', display: 'flex', justifyContent: 'center', gap: '8px', flexWrap: 'wrap', borderBottom: '1px solid #1e293b' }}>
         <button
           onClick={() => setActiveTab(1)}
           style={{
-            padding: '8px 12px',
+            padding: '8px 14px',
             borderRadius: '6px',
             border: 'none',
             cursor: 'pointer',
@@ -34,7 +34,7 @@ export default function App() {
         <button
           onClick={() => setActiveTab(2)}
           style={{
-            padding: '8px 12px',
+            padding: '8px 14px',
             borderRadius: '6px',
             border: 'none',
             cursor: 'pointer',
@@ -50,7 +50,7 @@ export default function App() {
         <button
           onClick={() => setActiveTab(3)}
           style={{
-            padding: '8px 12px',
+            padding: '8px 14px',
             borderRadius: '6px',
             border: 'none',
             cursor: 'pointer',
@@ -66,7 +66,7 @@ export default function App() {
         <button
           onClick={() => setActiveTab(4)}
           style={{
-            padding: '8px 12px',
+            padding: '8px 14px',
             borderRadius: '6px',
             border: 'none',
             cursor: 'pointer',
@@ -82,7 +82,7 @@ export default function App() {
         <button
           onClick={() => setActiveTab(5)}
           style={{
-            padding: '8px 12px',
+            padding: '8px 14px',
             borderRadius: '6px',
             border: 'none',
             cursor: 'pointer',
@@ -98,7 +98,7 @@ export default function App() {
         <button
           onClick={() => setActiveTab(6)}
           style={{
-            padding: '8px 12px',
+            padding: '8px 14px',
             borderRadius: '6px',
             border: 'none',
             cursor: 'pointer',
@@ -114,7 +114,7 @@ export default function App() {
         <button
           onClick={() => setActiveTab(7)}
           style={{
-            padding: '8px 12px',
+            padding: '8px 14px',
             borderRadius: '6px',
             border: 'none',
             cursor: 'pointer',
@@ -124,23 +124,7 @@ export default function App() {
             color: activeTab === 7 ? '#0f172a' : '#ffffff'
           }}
         >
-          Assignment 7
-        </button>
-
-        <button
-          onClick={() => setActiveTab(8)}
-          style={{
-            padding: '8px 12px',
-            borderRadius: '6px',
-            border: 'none',
-            cursor: 'pointer',
-            fontWeight: '700',
-            fontSize: '12px',
-            backgroundColor: activeTab === 8 ? '#38bdf8' : '#334155',
-            color: activeTab === 8 ? '#0f172a' : '#ffffff'
-          }}
-        >
-          Assignment 8: Expense Tracker
+          Assignment 7: Auth System
         </button>
       </nav>
 
@@ -153,7 +137,6 @@ export default function App() {
         {activeTab === 5 && <Assignment5 />}
         {activeTab === 6 && <Assignment6 />}
         {activeTab === 7 && <Assignment7 />}
-        {activeTab === 8 && <Assignment8 />}
       </main>
     </div>
   );
